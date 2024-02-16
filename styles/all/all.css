@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: 2px solid rgb(172, 15, 151);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul, menu {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+image {
+  object-fit: cover;
+  object-position: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}

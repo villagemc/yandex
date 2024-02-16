@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./index.css">
+  <title>Клуб четырех коней</title>
+</head>
+<body>
+  <!-- Доступен пользователям с ограниченными возможностями! -->
+  <!-- Доступна плавная клавиатурная навигация! -->
+  <div class="page">
+    <!-- Шапка сайта -->
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo" href="/">
+          <img
+            class="header__image"
+            src="./images/logo/logo.png"
+            alt="Логотип"
+          />
+        </a>
+        <div class="header__block">
+          <h1 class="header__title">
+            Превратите уездный город
+            <p>в столицу</p>
+            <p>земного шара</p>
+          </h1>
+          <p class="header__subtitle">
+            Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам
+          </p>
+          <nav>
+            <menu class="header__buttons"></menu>
+          </nav>
+        </div>
+      </div>
+      <img
+        class="header__icon header__icon_pawn"
+        src="./images/header/pawn.png"
+        alt="Пешка"
+      />
+      <img
+        class="header__icon header__icon_horse"
+        src="./images/header/horse.png"
+        alt="Конь"
+      />
+    </header>
+
+    <!-- Основная часть -->
+    <main>
+      <section class="titre"></section>
+
+      <section class="idea" id="idea">
+        <div class="idea__container container">
+          <div class="idea__content">
+            <h2 class="idea__title idea__title_first"></h2>
+            <img
+              class="idea__image idea__image_people"
+              src="./images/idea/people.png"
+              alt="Игра в шахматы"
+            />
+            <h2 class="idea__title idea__title_last">
+              <span>«Плодотворная дебютная идея»</span>
+            </h2>
+          </div>
+          <div class="idea__content">
+            <img
+              class="idea__image idea__image_man"
+              src="./images/idea/man.png"
+              alt="Игра в шахматы"
+            />
+            <div class="idea__block">
+              <h2 class="idea__title">
+                и Сеанс <span>одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера
+              </h2>
+              <ul class="idea__tables"></ul>
+              <a class="link" href="/" target="_blank">
+                По всем вопросам обращаться в администрацию к К. Михельсону
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tourney" id="tourney">
+        <div class="tourney__container container">
+          <div class="tourney__header">
+            <h2 class="title">
+              Этапы преображения Васюков
+            </h2>
+            <a class="tourney__link link" href="/" target="_blank">
+              Будущие источники обогащения васюкинцев
+            </a>
+          </div>
+          <div class="tourney__review">
+            <div class="slide slide_tourney">
+              <button class="slide__button slide__button_tourney_back" type="button" disabled>
+                <img
+                  class="slide__arrow"
+                  src="./images/slide/arrow.svg"
+                  alt="Стрелка назад"
+                />
+              </button>
+              <ul class="slide__circles"></ul>
+              <button class="slide__button slide__button_tourney_forward" type="button" disabled>
+                <img
+                  class="slide__arrow slide__arrow_reverse"
+                  src="./images/slide/arrow.svg"
+                  alt="Стрелка вперед"
+                />
+              </button>
+            </div>
+            <img
+              class="tourney__plane"
+              src="./images/tourney/plane.png"
+              alt="Самолет"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="member">
+        <div class="member__container container">
+          <h2 class="title member__head">Участники турнира</h2>
+          <div class="slide slide_member member__slide">
+            <button class="slide__button slide__button_member_back" type="button">
+              <img
+                class="slide__arrow"
+                src="./images/slide/arrow.svg"
+                alt="Стрелка назад"
+              />
+            </button>
+            <p>
+              <span class="slide__stats slide__stats_count"></span>
+              <span class="slide__stats slide__stats_limit"> / </span> 
+            </p>
+            <button class="slide__button slide__button_member_forward" type="button">
+              <img
+                class="slide__arrow slide__arrow_reverse"
+                src="./images/slide/arrow.svg"
+                alt="Стрелка вперед"
+              />
+            </button>
+          </div>
+          <ul class="member__cards"></ul>
+        </div>
+      </section>
+
+      <section class="titre"></section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__note">
+          Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+        </p>
+      </div>
+    </footer>
+
+    <!-- Абстракция навигации -->
+    <template class="template-links">
+      <li class="header__button">
+        <p class="header__text"></p>
+        <a class="header__link" href=""></a>
+      </li>
+    </template>
+
+    <!-- Абстракция титров -->
+    <template class="template-titres">
+      <ul class="titre__items"></ul>
+    </template>
+
+    <!-- Абстракция титра -->
+    <template class="template-titre">
+      <li class="titre__item">
+        <p class="titre__paragraph"></p>
+        <span class="titre__circle"></span>
+      </li>
+    </template>
+
+    <!-- Абстракция таблицы -->
+    <template class="template-table">
+      <li class="idea__table">
+        <div class="table__cell table__cell_main">
+          <p class="idea__paragraph idea__paragraph_main"></p>
+        </div>
+        <div class="table__cell table__cell_desc">
+          <p class="idea__paragraph idea__paragraph_desc"></p>
+        </div>
+      </li>
+    </template>
+
+    <!-- Абстракция скидки из таблицы -->
+    <template class="template-table-discount">
+      <span></span>
+    </template>
+
+    <!-- Абстракция карточек -->
+    <template class="template-cards">
+      <ul class="tourney__cards"></ul>
+    </template>
+
+    <!-- Абстракция карточки -->
+    <template class="template-card">
+      <li class="tourney__card"></li>
+    </template>
+
+    <!-- Абстракция содержимого карточки -->
+    <template class="template-block">
+      <div class="tourney__block">
+        <span class="tourney__count"></span>
+        <p class="tourney__desc"></p>
+      </div>
+    </template>
+
+    <!-- Абстракция кнопок слайда -->
+    <template class="template-circle">
+      <li>
+        <button class="slide__circle" type="button"></button>
+      </li>
+    </template>
+
+    <!-- Абстракция карточки участника -->
+    <template class="template-member">
+      <li class="member__card">
+        <img class="member__image" src="" alt=""/>
+        <div class="member__header">
+          <h3 class="member__title"></h3>
+          <p class="member__subtitle"></p>
+        </div>
+        <a class="member__link" href="" target="_blank">
+          Подробнее
+        </a>
+      </li>
+    </template>
+
+    <!-- Скрипты -->
+    <script type="module" src="./index.js"></script>
+  </div>
+</body>
+</html>

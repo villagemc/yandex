@@ -1,0 +1,232 @@
+.header {
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  min-height: 700px;
+  background-color: var(--global-color-back);
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    min-height: 774px;
+  }
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../images/header/image.png);
+  mix-blend-mode: color-burn;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  bottom: -3%;
+  left: -9%;
+  z-index: -3;
+  width: min(122vw, 1627px);
+  height: min(62vw, 825px);
+  background-image: url(../../images/header/city.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .header::before {
+    bottom: -8.7vw;
+    left: -109%;
+    width: 236.5%;
+    height: 120vw;
+    scale: .9;
+  }
+}
+
+.header__icon {
+  position: absolute;
+  z-index: -1;
+}
+
+.header__icon_pawn {
+  right: clamp(35px, 2.6vw, 45px);
+  bottom: clamp(10px, 1.35vw, 20px);
+  width: 82px;
+}
+
+@media screen and (max-width: 1340px) {
+  .header__icon_pawn {
+    right: clamp(15px, 1.17vw, 35px);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .header__icon_pawn {
+    display: none;
+  }
+}
+
+.header__icon_horse {
+  bottom: -5.2%;
+  right: clamp(308px, 24vw, 358px);
+  width: clamp(77px, 10.25vw, 154px);
+  height: clamp(122px, 16vw, 244px);
+  rotate: -11deg;
+}
+
+@media screen and (max-width: 1280px) {
+  .header__icon_horse {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .header__icon_horse {
+    display: block;
+    right: 38%;
+    bottom: -20px;
+  }
+}
+
+.header__container {
+  padding-top: clamp(18px, 4.8vw, 26px);
+}
+
+.header__logo {
+  max-width: clamp(213px, 56.8vw, 245px);
+  display: block;
+  transition: scale .3s;
+}
+
+.header__logo:hover {
+  scale: 1.05;
+}
+
+.header__image {
+  display: block;
+  width: 100%;
+}
+
+.header__block {
+  padding-top: clamp(40px, 10.7vw, 62px);
+  max-width: 545px;
+}
+
+.header__title {
+  font-family: var(--font-merri);
+  font-size: clamp(36px, 9.6vw, 60px);
+  font-weight: 400;
+  line-height: 110%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.header__title p {
+  text-align: center;
+}
+
+.header__subtitle {
+  margin-top: 24px;
+  margin-bottom: clamp(32px, 8.5vw, 40px);
+  font-family: var(--font-golos);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header__subtitle {
+    text-align: left;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .header__subtitle {
+    font-weight: 400;
+  }
+}
+
+.header__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .header__buttons {
+    grid-template-columns: 1fr;
+  }
+}
+
+.header__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(18px, 4.8vw, 20px) 0;
+  background-color: red;
+  border-radius: 66px;
+  transition: background-color .3s, color .3s, border .3s;
+}
+
+.header__button:nth-child(1) {
+  background-color: var(--global-color-border);
+  color: var(--global-color-negative);
+}
+
+.header__button:nth-child(1):hover {
+  background-color: var(--global-color-active);
+  color: var(--global-color-border);
+}
+
+.header__button:nth-child(2) {
+  background-color: var(--global-color-transparent);
+  border: 2px solid var(--global-color-border);
+}
+
+.header__button:nth-child(2):hover {
+  background-color: var(--global-color-border);
+  color: var(--global-color-negative);
+}
+
+@media screen and (max-width: 1280px) {
+  .header__button:nth-child(2) {
+    background-color: var(--global-color-negative);
+    border-color: var(--global-color-negative);
+  }
+
+  .header__button:nth-child(2):hover {
+    border-color: var(--global-color-border);
+  }
+}
+
+.header__text {
+  max-width: 165px;
+  font-family: var(--font-golos);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header__text {
+    max-width: 100%;
+  }
+}
+
+.header__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}

@@ -1,0 +1,18 @@
+:root {
+  /* Цвета */
+  --global-color: rgb(49, 49, 49);
+  --global-color-back: rgb(233, 222, 212);
+  --global-color-minor: rgb(245, 73, 50);
+  --global-color-links: rgb(48, 87, 162);
+  --global-color-border: rgb(31, 31, 31);
+  --global-color-active: rgb(251, 206, 81);
+  --global-color-negative: rgb(255, 255, 255);
+  --global-color-table: rgb(208, 208, 208);
+  --global-color-circle: rgb(217, 217, 217);
+  --global-color-member: rgb(21, 21, 21);
+  --global-color-transparent: transparent;
+  /* Шрифты */
+  --global-font: Arial, Helvetica, sans-serif;
+  --font-golos: 'Golos Text', var(--global-font);
+  --font-merri: 'Merriweather', var(--global-font);
+}

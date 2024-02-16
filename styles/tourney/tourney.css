@@ -1,0 +1,220 @@
+.tourney__container {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+@media screen and (max-width: 768px) {
+  .tourney__container {
+    gap: 148px;
+  }
+}
+
+.tourney__header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tourney__link {
+  position: absolute;
+  max-width: 280px;
+  left: 300px;
+  bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .tourney__link {
+    position: static;
+    max-width: 100%;
+  }
+}
+
+.tourney__review {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.tourney__plane {
+  position: absolute;
+  max-width: 374px;
+  width: 100%;
+  right: -60px;
+  bottom: -6px;
+}
+
+@media screen and (max-width: 1324px) {
+  .tourney__plane {
+    max-width: 350px;
+    bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .tourney__plane {
+    max-width: 300px;
+    top: 0px;
+    right: -11px;
+    z-index: -1;
+    transform: translateY(-100%);
+    bottom: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .tourney__plane {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tourney__plane {
+    display: block;
+    max-width: 317px;
+    transform: translateY(-118.55px);
+    z-index: 0;
+  }
+}
+
+.tourney__cards {
+  max-width: 100%;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    'a b c'
+    'd e c'
+    'f g g'
+  ;
+}
+
+.tourney__cards:nth-child(2) {
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .tourney__cards {
+    grid-template-areas:
+    'a c'
+    'b c'
+    'd f'
+    'e f'
+    'g g'
+  ;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tourney__cards {
+    overflow: hidden;
+    gap: 0;
+  }
+
+  .tourney__cards:nth-child(1) {
+    display: none;
+  }
+
+  .tourney__cards:nth-child(2) {
+    display: flex;
+  }
+}
+
+.tourney__card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform .3s linear;
+}
+
+.tourney__card:nth-child(1) {
+  grid-area: a;
+}
+
+.tourney__card:nth-child(2) {
+  grid-area: b;
+}
+
+.tourney__card:nth-child(3) {
+  grid-area: c;
+}
+
+.tourney__card:nth-child(4) {
+  grid-area: d;
+}
+
+.tourney__card:nth-child(5) {
+  grid-area: e;
+}
+
+.tourney__card:nth-child(6) {
+  grid-area: f;
+}
+
+.tourney__card:nth-child(7) {
+  grid-area: g;
+}
+
+@media screen and (max-width: 768px) {
+  .tourney__card {
+    width: 100%;
+    flex-shrink: 0;
+    padding: 62px 20px 34px 20px;
+  }
+
+  .tourney__card:first-child {
+    padding-right: 24px;
+  }
+}
+
+.tourney__block {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  z-index: 2;
+}
+
+.tourney__count {
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50%;
+  background-color: var(--global-color-negative);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-golos);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.tourney__desc {
+  max-width: 302px;
+  font-family: var(--font-golos);
+  font-size: clamp(18px, 4.8vw, 20px);
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.tourney__card:nth-child(7) .tourney__block .tourney__desc {
+  max-width: 446px;
+}
+
+@media screen and (max-width: 1280px) {
+  .tourney__desc {
+    max-width: 80% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tourney__desc {
+    max-width: 402px !important;
+  }
+}

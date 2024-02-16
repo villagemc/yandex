@@ -1,0 +1,176 @@
+.idea {
+  padding-top: clamp(48px, 12.8vw, 80px);
+  padding-bottom: clamp(120px, 32vw, 165px);
+  overflow: hidden;
+}
+
+.idea__container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(34px, 9.1vw, 64px);
+}
+
+.idea__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.idea__content:nth-child(2) {
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 1280px) {
+  .idea__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.idea__block {
+  max-width: 704px;
+}
+
+@media screen and (max-width: 1280px) {
+  .idea__block {
+    max-width: 1000px;
+  }
+}
+
+.idea__title {
+  max-width: 764px;
+  font-family: var(--font-merri);
+  font-size: clamp(28px, 7.5vw, 36px);
+  font-weight: 700;
+  line-height: 135%;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1280px) {
+  .idea__title {
+    max-width: 1000px;
+  }
+}
+
+.idea__title_first {
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .idea__title_first {
+    display: inline;
+  }
+
+  .idea__title_first::before {
+    content: 'Чтобы поддержать Международный васюкинский турнир';
+  }
+}
+
+.idea__title_last:before {
+  content: 'Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему:';
+}
+
+@media screen and (max-width: 1280px) {
+  .idea__title_last::before {
+    content: 'посетите лекцию на тему:';
+  }
+}
+
+.idea__title > span {
+  color: var(--global-color-minor);
+}
+
+.idea__image_people {
+  max-width: clamp(335px, 89.3vw, 394px);
+  order: 1;
+}
+
+@media screen and (max-width: 1280px) {
+  .idea__image_people {
+    order: 0;
+  }
+}
+
+.idea__image_man {
+  position: relative;
+  top: -47px;
+  left: -27px;
+  max-width: min(99vw, 528px);
+}
+
+@media screen and (max-width: 1280px) {
+  .idea__image_man {
+    top: -13px;
+    left: -19px;
+  }
+}
+
+.idea__tables {
+  padding-top: clamp(44px, 11.7vw, 60px);
+  padding-bottom: clamp(40px, 10.7vw, 48px);
+}
+
+.idea__table {
+  border-bottom: 2px solid var(--global-color-table);
+  display: grid;
+  grid-template-columns: 43.5fr 56.5fr;
+}
+
+@media screen and (max-width: 768px) {
+  .idea__table {
+    grid-template-columns: 1fr;
+  }
+}
+
+.idea__table:last-child {
+  border-bottom: none;
+}
+
+.table__cell {
+  padding-bottom: 16px;
+}
+
+.table__cell_main {
+  padding-right: 16px;
+  border-right: 2px solid var(--global-color-table);
+}
+
+@media screen and (max-width: 768px) {
+  .table__cell_main {
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 12px;
+  }
+}
+
+.table__cell_desc {
+  padding-left: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .table__cell_desc {
+    padding-left: 0;
+  }
+}
+
+.idea__paragraph {
+  font-family: var(--font-golos);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.idea__paragraph span {
+  margin-right: clamp(8px, 2.13vw, 12px);
+  text-decoration: line-through;
+  text-decoration-color: var(--global-color-minor);
+}
+
+.idea__paragraph_main {
+  opacity: .7;
+}
+
+.idea__paragraph_desc {
+  font-weight: 600;
+}

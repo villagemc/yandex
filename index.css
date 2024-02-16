@@ -1,0 +1,38 @@
+/* Шрифт Golos Text  */
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+/* Общие правила CSS */
+@import url(./styles/root/root.css);
+
+/* Глобальная стилизация */
+@import url(./styles/all/all.css);
+
+/* Стилизация основы страницы */
+@import url(./styles/page/page.css);
+
+/* Универсальные стили */
+@import url(./styles/container/container.css);
+@import url(./styles/title/title.css);
+@import url(./styles/link/link.css);
+
+/* Стили переключений */
+@import url(./styles/slide/slide.css);
+
+/* Шапка страницы */
+@import url(./styles/header/header.css);
+
+/* Секция Titre */
+@import url(./styles/titre/titre.css);
+
+/* Секция Idea */
+@import url(./styles/idea/idea.css);
+
+/* Секция Tourney */
+@import url(./styles/tourney/tourney.css);
+
+/* Секция Member */
+@import url(./styles/member/member.css);
+
+/* Футер */
+@import url(./styles/footer/footer.css);
