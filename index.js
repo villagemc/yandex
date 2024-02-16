@@ -190,7 +190,7 @@ const transformMember = () => {
 
   const { index } = initialWidthMembers
     .find(({ width }) => 
-      window.innerWidth > width.min &&
+      window.innerWidth >= width.min &&
       window.innerWidth < width.max
     );
 
